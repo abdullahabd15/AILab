@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecyclerViewSampleActivity">
+        <activity android:name=".activity_lifecycle.SecondActivity"></activity>
+        <activity android:name=".activity_lifecycle.FirstActivity" />
+        <activity android:name=".recyclerView.RecyclerViewSampleActivity" />
+        <activity android:name=".navigation_activty.DActivity" />
+        <activity android:name=".navigation_activty.CActivity" />
+        <activity android:name=".navigation_activty.BActivity" />
+        <activity android:name=".navigation_activty.AActivity" />
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

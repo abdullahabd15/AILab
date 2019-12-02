@@ -1,9 +1,11 @@
-package com.ai.project.ailab
+package com.ai.project.ailab.recyclerView
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.ImageView
 import android.widget.TextView
+import com.ai.project.ailab.data.MenuData
+import com.ai.project.ailab.R
 import com.ai.project.libui.RecyclerViewItem
 
 class MenuItemView: RecyclerViewItem<MenuData> {

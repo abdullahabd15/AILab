@@ -1,8 +1,10 @@
-package com.ai.project.ailab
+package com.ai.project.ailab.recyclerView
 
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ai.project.ailab.data.MenuData
+import com.ai.project.ailab.R
 import com.ai.project.libui.AiActivity
 import com.ai.project.libui.AiRecyclerView
 import com.ai.project.libui.AiRecyclerViewAdapter
@@ -29,14 +31,8 @@ class RecyclerViewSampleActivity : AiActivity(), RecyclerViewItem.ItemListener<M
     }
 
     private fun initComponent() {
-        initActionBar()
+        initActionBar("Recycler View Sample")
         initRecyclerView()
-    }
-
-    private fun initActionBar() {
-        val actionBar = supportActionBar
-        actionBar?.title = "Main Menu"
-        actionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun initRecyclerView() {

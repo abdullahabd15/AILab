@@ -1,4 +1,4 @@
-package com.ai.project.ailab
+package com.ai.project.ailab.data
 
 import android.graphics.Bitmap
 
