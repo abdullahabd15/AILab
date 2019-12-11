@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ai.project.ailab.activity_lifecycle.FirstActivity
+import com.ai.project.ailab.custom_call_screen.DialerActivity
 import com.ai.project.ailab.data.MenuData
 import com.ai.project.ailab.navigation_activty.AActivity
 import com.ai.project.ailab.recyclerView.RecyclerViewSampleActivity
@@ -34,6 +35,7 @@ class HomeActivity : AiActivity(), RecyclerViewItem.ItemListener<MenuData> {
             data?.title.equals("Recycler View") -> startActivity(Intent(applicationContext, RecyclerViewSampleActivity::class.java))
             data?.title.equals("Navigation Menu") -> startActivity(Intent(applicationContext, AActivity::class.java))
             data?.title.equals("Activity Lifecycle") -> startActivity(Intent(applicationContext, FirstActivity::class.java))
+            data?.title.equals("Custom Dial Phone") -> startActivity(Intent(applicationContext, DialerActivity::class.java))
         }
     }
 
@@ -71,9 +73,14 @@ class HomeActivity : AiActivity(), RecyclerViewItem.ItemListener<MenuData> {
         lifecycleMenu.title = "Activity Lifecycle"
         lifecycleMenu.subTitle = "Contoh Activity Lifecycle"
 
+        val dialerMenu = MenuData()
+        dialerMenu.title = "Custom Dial Phone"
+        dialerMenu.subTitle = "Contoh Dial Phone dengan Custom Call Screen"
+
         menuList.add(recyclerViewMenu)
         menuList.add(navigationMenu)
         menuList.add(lifecycleMenu)
+        menuList.add(dialerMenu)
         adapter?.notifyDataSetChanged()
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".custom_call_screen.DialerActivity">
+
+    <EditText
+        android:id="@+id/et_dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:inputType="phone"
+        android:imeOptions="actionDone"/>
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_dial"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Panggil"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/color_white"/>
+
+    <Button
+        android:id="@+id/btn_call_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_call"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Get Call Log"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/color_white" />
+
+    <com.ai.project.libui.AiRecyclerView
+        android:id="@+id/rv_call_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_call_log"
+        android:layout_margin="8dp"/>
+
+</RelativeLayout>
