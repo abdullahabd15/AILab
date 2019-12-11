@@ -1,2 +1,2 @@
-include ':app', ':libui'
+include ':app', ':libui', ':libcore'
 rootProject.name='AI Lab'

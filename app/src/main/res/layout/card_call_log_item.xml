@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ai.project.ailab.custom_call_screen.CallLogItemCard
+<com.ai.project.ailab.custom_call_screen.CallLogItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
@@ -80,4 +80,4 @@
 
     </LinearLayout>
 
-</com.ai.project.ailab.custom_call_screen.CallLogItemCard>
+</com.ai.project.ailab.custom_call_screen.CallLogItemView>

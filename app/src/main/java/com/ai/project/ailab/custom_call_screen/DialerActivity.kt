@@ -14,6 +14,8 @@ import android.widget.EditText
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ai.project.ailab.R
+import com.ai.project.libcore.AiCallUtil
+import com.ai.project.libcore.CallLogData
 import com.ai.project.libui.AiActivity
 import com.ai.project.libui.AiRecyclerView
 import com.ai.project.libui.AiRecyclerViewAdapter
@@ -25,7 +27,7 @@ class DialerActivity : AiActivity() {
     private var rvCallLog: AiRecyclerView? = null
     private var adapter: AiRecyclerViewAdapter<CallLogData>? = null
     private var callLogList: MutableList<CallLogData>? = ArrayList()
-    private var callUtil: CallUtil? = null
+    private var callUtil: AiCallUtil? = null
 
     companion object {
         const val CALL_PHONE_PERMISSION_CODE = 888
@@ -54,7 +56,7 @@ class DialerActivity : AiActivity() {
 
     @Throws(Exception::class)
     private fun initObject() {
-        callUtil = CallUtil(this)
+        callUtil = AiCallUtil(this)
     }
 
     private fun initComponent() {
@@ -88,12 +90,14 @@ class DialerActivity : AiActivity() {
         }
 
         btnCallLog?.setOnClickListener {
-            val dataList: MutableList<CallLogData> = callUtil?.callHistory!!
-            dataList.sortByDescending {
+            val dataList: MutableList<CallLogData>? = callUtil?.getCallHistory()
+            dataList?.sortByDescending {
                 it.callDateTime
             }
             callLogList?.clear()
-            callLogList?.addAll(dataList)
+            if (dataList != null) {
+                callLogList?.addAll(dataList)
+            }
             adapter?.notifyDataSetChanged()
         }
     }

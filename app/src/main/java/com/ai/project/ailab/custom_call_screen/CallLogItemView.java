@@ -10,18 +10,18 @@ import androidx.annotation.Nullable;
 import com.ai.project.ailab.R;
 import com.ai.project.libui.RecyclerViewItem;
 
-public class CallLogItemCard extends RecyclerViewItem<CallLogData> {
+public class CallLogItemView extends RecyclerViewItem<CallLogData> {
     private TextView tvPhoneNumber, tvCallType, tvCallDate, tvDuration;
 
-    public CallLogItemCard(Context context) {
+    public CallLogItemView(Context context) {
         super(context);
     }
 
-    public CallLogItemCard(Context context, @Nullable AttributeSet attrs) {
+    public CallLogItemView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CallLogItemCard(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CallLogItemView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

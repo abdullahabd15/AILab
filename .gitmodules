@@ -1,3 +1,8 @@
 [submodule "libui"]
 	path = libui
 	url = https://github.com/abdullahabd15/libui.git
+
+
+[submodule "libcore"]
+	path = libcore
+	url = https://github.com/abdullahabd15/libcore.git
