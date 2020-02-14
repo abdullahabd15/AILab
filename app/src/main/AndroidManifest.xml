@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.REORDER_TASKS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,12 +22,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".room.RoomExampleActivity"></activity>
+        <activity
+            android:name=".login.RegisterUserActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".custom_call_screen.DialerActivity" />
         <activity
             android:name=".custom_call_screen.CustomCallScreenActivity"
-            android:screenOrientation="portrait"
-            android:excludeFromRecents="true">
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
             <intent-filter>
+
                 <!-- Handle links from other applications -->
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.DIAL" />
@@ -34,14 +49,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <!-- Handle links in browsers -->
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="tel" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.DIAL" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.ANSWER" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -51,13 +69,7 @@
         <activity android:name=".navigation_activty.CActivity" />
         <activity android:name=".navigation_activty.BActivity" />
         <activity android:name=".navigation_activty.AActivity" />
-        <activity android:name=".HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".HomeActivity" />
 
         <receiver
             android:name=".custom_call_screen.CallStateReceiver"
@@ -68,10 +80,11 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".custom_call_screen.AiNotificationListenerService"
+        <service
+            android:name=".custom_call_screen.AiNotificationListenerService"
             android:enabled="true"
-            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
-            android:exported="true">
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>

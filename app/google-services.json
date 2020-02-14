@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "202491725349",
+    "firebase_url": "https://ai-lab-12e06.firebaseio.com",
+    "project_id": "ai-lab-12e06",
+    "storage_bucket": "ai-lab-12e06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202491725349:android:5a589976625d42a985a1cc",
+        "android_client_info": {
+          "package_name": "com.ai.project.ailab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202491725349-k1ceah5br0f94ruh9jlco8eiovcvmahf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ai.project.ailab",
+            "certificate_hash": "a08539809f552fd40046c529b7085a72e29237b0"
+          }
+        },
+        {
+          "client_id": "202491725349-f9ltfrcvnndgc5lg5dsjqdbl3aicvj93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEDG1ndPWC2I_6iFsbLcq5cnaM7mJgNE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202491725349-f9ltfrcvnndgc5lg5dsjqdbl3aicvj93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

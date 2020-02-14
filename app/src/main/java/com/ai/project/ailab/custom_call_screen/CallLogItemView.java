@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.ai.project.ailab.R;
+import com.ai.project.libcore.CallLogData;
 import com.ai.project.libui.RecyclerViewItem;
 
 public class CallLogItemView extends RecyclerViewItem<CallLogData> {

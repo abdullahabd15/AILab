@@ -64,9 +64,4 @@ class FirstActivity : AiActivity() {
         super.onNewIntent(intent)
         showAlertToast("onNewIntent")
     }
-
-    override fun onSaveInstanceState(outState: Bundle?) {
-        super.onSaveInstanceState(outState)
-        showAlertToast("onSaveInstanceStateWithBundle")
-    }
 }
